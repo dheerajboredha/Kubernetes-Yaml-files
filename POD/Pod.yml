@@ -1,0 +1,7 @@
+apiVersion: V1
+kind: Pod
+metadata: 
+  name: demopod
+spec:
+  containers:
+    - name: my-container
