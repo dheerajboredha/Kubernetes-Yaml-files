@@ -1,0 +1,13 @@
+apiVersion: V1
+kind: Pod
+metadata: 
+  name: nodesvc-pod
+  labels:
+    app: test-node
+spec:
+  containers:
+    - name: my-container
+      image: nginx:1.29
+      ports:
+        - containerPort: 80
+          protocol: TCP
