@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demopod
+  labels:
+    app: demo-app
+  annotations:
+    myecr: "<paste ecr url>"
+    service.beta.kuberenetes.io/aws-load-balancer-scheme: internet-facing
+spec:
+  containers:
+    - name: my-con 
+      image: nginx:1.29
+      ports:
+        - containerPort: 80
