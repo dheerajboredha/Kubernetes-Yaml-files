@@ -5,3 +5,7 @@ metadata:
 spec:
   containers:
     - name: my-container
+      image: nginx:1.29
+      ports:
+        - container: 80
+          protocol: TCP
