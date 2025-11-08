@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    app: testapp
+  namespace: prod
+spec:
+  containers:
+    - name: mycontainer 
+      image: nginx:1.29
+      ports:
+        - containerPort: 80
+
+# kubectl apply -f . <not works beacuse of namespace so we need to create namespace 1st>
+# kubectl create namespace prod  <than shift to namespace>
+# kubectl config set-context --current --namespace=prod <than apply>
+# kubectl apply -f .
+# kubectl get pod 
+# kubectl describe pod podname
