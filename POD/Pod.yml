@@ -7,5 +7,5 @@ spec:
     - name: my-container
       image: nginx:1.29
       ports:
-        - container: 80
+        - containerPort: 80
           protocol: TCP
